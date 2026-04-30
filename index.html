@@ -316,7 +316,7 @@
         start.setDate(start.getDate() - 30);
         const fmt = d => d.toISOString().split('T')[0];
 
-        const res = await fetch(`https://api.frankfurter.app/${fmt(start)}..${fmt(end)}?from=USD&to=AUD`);
+       const res = await fetch(`https://api.frankfurter.dev/${fmt(start)}..${fmt(end)}?from=USD&to=AUD`);
         if (!res.ok) throw new Error('API error');
         const data = await res.json();
 
